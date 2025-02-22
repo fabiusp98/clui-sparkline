@@ -173,6 +173,8 @@ __Parameters__
 
 * `values` - An array of values to go into the sparkline
 * `suffix` - A suffix to use when drawing the current and max values at the end of sparkline
+* `opts` - Allows various options to be passed trough:
+  * `highlight` - Either "max" (default), "min" or none. Which hilights the biggest, least or none of the values.
 
 __Example__
 
@@ -180,7 +182,7 @@ __Example__
 var Sparkline = require('clui').Sparkline;
 var reqsPerSec = [10,12,3,7,12,9,23,10,9,19,16,18,12,12];
 
-console.log(Sparkline(reqsPerSec, 'reqs/sec'));
+console.log(Sparkline(reqsPerSec, 'reqs/sec', {"highlight": "min"}));
 ```
 
 <a name="progress"></a>
